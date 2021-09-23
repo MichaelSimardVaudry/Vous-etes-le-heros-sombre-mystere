@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "glitch";
+  src: url("assets/fonts/Glitch.otf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Playfair+Display&display=swap");
+
+body {
+  background-color: #0a0908;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.game {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: #927e67;
+  color: #eae0d5;
+  width: 600px;
+  max-width: 900px;
+  min-width: 400px;
+  min-height: 100px;
+  height: 700px;
+}
+.titre_jeux {
+  color: #161e22;
+  font-size: 100px;
+  font-family: glitch;
+}
+.titre_chapitre {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+}
+.text_jeux {
+  font-family: "Josefin Sans", sans-serif;
+}
+.butterfly {
+  max-width: 50%;
+}
+.boutons {
+  color: #eae0d5;
+  display: flex;
+  justify-content: space-evenly;
+}
+button {
+  background-color: #161e22;
+  color: #eae0d5;
+  border-radius: 15px;
+}
