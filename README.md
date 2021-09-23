@@ -1,5 +1,13 @@
-<img src="assets/img/sombremystere.png" alt="logo" />
+![logo](assets/img/sombremystere.png)
 
-![logo](assets/img/sombremystere.jpg)
-Genre: Sci-Fi, Horreur, Gore
-Inspiration: SAW
+[Développement web - Projet vous êtes le héros](https://smnarnold.com/projets/vous-etes-le-heros)
+
+**Genre**: Sci-Fi, Horreur, Gore
+
+**Inspiration**: [SAW](https://www.imdb.com/title/tt0387564/)
+
+**Palette de couleurs**: [coolors.co](https://coolors.co/0a0908-161e22-22333b-868a88-eae0d5-d8c6b2-c6ac8f-927e67-9c8a75-5e503f)
+
+## **Diagramme**
+
+![draw.io](assets/img/sombre_mystere_drawio.png)

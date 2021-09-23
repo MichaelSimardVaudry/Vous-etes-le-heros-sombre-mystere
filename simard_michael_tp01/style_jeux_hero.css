@@ -25,9 +25,7 @@ body {
   height: 700px;
 }
 .titre_jeux {
-  color: #161e22;
-  font-size: 100px;
-  font-family: glitch;
+  height: 150px;
 }
 .titre_chapitre {
   font-family: "Playfair Display", serif;
