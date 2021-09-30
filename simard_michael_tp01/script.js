@@ -3,62 +3,136 @@ let chaptersObj = {
     subtitle: "pris au piège",
     text: "Touts d'un coups vous sentez de forte vibration de nul part, d'un seul coups vous vous apercevez que les mure de chaque coter de la piece bouge ne ce refermant sur vous",
     img: "simard_michael_tp01/assets/img/chapter_01_wall.jpg",
-    options: function chp01Arr() = ["vous briser le miroir 'seulement plus tard'("goToChapter(chapter1_1)")", "vous grimpez sur le dessu du mur (goToChapter(chapter1_2))", "mettre un morceau de fer pour bloquer les murs(goToChapter(chapter1_3))"];,
-  };
+    options:[ 
+      {
+      text:"vous briser le miroir (seulement plus tard)",
+      action:"goToChapter(`chapter1_1`)"}
+      ,{
+      text: "vous grimpez sur le dessu du mur ",
+      action: "goToChapter(`chapter1_2`)"
+      }
+      ,{
+      text:"mettre un morceau de fer pour bloquer les murs",
+      action:"goToChapter(`chapter1_3`)",
+      }
+    ]
+  },
   chapter1_1 : {
     subtitle: "pris au piège",
     text: "vous arrivez dans une salle  avec une petite statue qui vous regade et vous dits félicitaion !",
     img: "simard_michael_tp01/assets/img/chapter_01_01_statue.jpg",
-    options: function chp01_1Arr() = ["Bravo!"];,
-  };
+    options:[
+      {
+      text: "Bravo!",
+      }
+    ]
+  },
   chapter1_2 : {
     subtitle: "pris au piège",
     text: "Vous franchiser une petite porte.",
     img: "simard_michael_tp01/assets/img/chapter_01_02_porte.jpg",
-    options: function chp01_2Arr() = ["Suivant("goToChapter(chapter2)")"];,
-  };
+    options:[
+      {  
+      text:"Suivant",
+      action:"agoToChapter(`chapter2`)",
+      }
+    ]
+  },
   chapter1_3 : {
     subtitle: "pris au piège",
     text: "vous mourez transpercé par le bout de fer",
     img: "simard_michael_tp01/assets/img/chapter_01_01_statue.jpg",
-    options: function chp01_3Arr() = ["Suivant("goToChapter(chapter1)")"];,
-  };
+    options:[
+      {
+        text:"Suivant",
+        action:"goToChapter(`chapter1`)",
+  }
+]
+  },
   chapter2 : {
     subtitle: "vous ou elle",
     text: "En entrant dans la piece vous appercevez un gros tube avec une inconnue a l'interieur. Sur un panneau devant vous, ce trouve 3 boutons, un rouge, un bleu et un vert.",
     img: "simard_michael_tp01/assets/img/chapter_02_tube.png",
-    options: function chp02Arr() = ["appuyer sur le bouton noir'("goToChapter(chapter2_1)")", "appuyer sur le bouton Bleu ("goToChapter(chapter2_3)")", "appuyer sur le bouton Rouge ("goToChapter(chapter2_2_1)")"];,
-  };
+    options:
+    [
+      {
+        text:"appuyer sur le bouton noir",
+        action:"goToChapter(`chapter2_1`)",
+      },
+      {
+        text:"appuyer sur le bouton Bleu",
+        action:"goToChapter(`chapter2_3`)",
+      },
+      {
+        text:"appuyer sur le bouton Rouge",
+        action:"goToChapter(`chapter2_2_1`)",
+      },
+    ]
+  },
   chapter2_1 : {
     subtitle: "vous ou elle",
     text: "la piece et le tube se rempli de poison",
     img: "simard_michael_tp01/assets/img/chapter_02_01_gas.png",
-    options: function chp02_1Arr() = ["Suivant("goToChapter(chapter1)")"];,
-  };
+    options:
+    [
+      {
+        text:"Suivant",
+        action:"goToChapter(`chapter1`)",
+      }
+    ] 
+  },
   chapter2_2_1 : {
     subtitle: "vous ou elle",
     text: "Le tube devant vous ce remplit de gas",
     img: "simard_michael_tp01/assets/img/chapter_02_01_gas.png",
-    options: function chp02_1_2Arr() = ["Suivant("goToChapter(chapter2_2_2)")"];,
-  };
+    options: 
+    [
+      {
+      text:"Suivant",
+      action:"goToChapter(`chapter2_2_2`)",
+      }
+    ]
+  },
   chapter2_2_2 : {
     subtitle: "vous ou elle",
     text: "la porte devant vous s'ouvre, vous la franchisez.",
     img: "simard_michael_tp01/assets/img/chapter_01_02_porte.jpg",
-    options: function chp02_2_2Arr() = ["Suivant("goToChapter(chapter3)")"];,
-  };
+    options:
+    [
+      {
+        text:"Suivant",
+        action:"goToChapter(`chapter3`)",
+      }
+    ]
+  },
   chapter2_3 : {
     subtitle: "vous ou elle",
     text: "La piece ce rempli de poison.",
     img: "simard_michael_tp01/assets/img/chapter_02_01_gas.png",
-    options: function chp02_3Arr() = ["Suivant("goToChapter(chapter1)")"];,
-  };
+    options:
+    [
+      {
+        text:"Suivant",
+        action:"goToChapter(`chapter1`)",
+      }
+    ]
+  },
   chapter3 : {
     subtitle: "Vitesse",
     text: "Devant vous sur la table ce trouve une arme. celle ci est chargé d'une balle. vous comprenez que vous devrez jouer a la roulette russe.",
     img: "simard_michael_tp01/assets/img/chapter_03_pistolet.jpg",
-    options: function chp03Arr() = ["vous tournez rapidement ("goToChapter(chapter3_1)")", "vous tournez lentement(goToChapter(chapter3_2))"];,
-  };
+    options:
+    [
+      {
+        text:"vous tournez rapidement",
+        action:"goToChapter(`chapter3_1`)",
+       },
+       {
+      text:"vous tournez lentement",
+       action:"goToChapter(`chapter3_2`)"
+       }
+      ],
+  },
   chapter3_1 : {
     subtitle: "Vitesse",
     text: "vous tirez une balle dans votre tête.",
@@ -128,7 +202,7 @@ let chaptersObj = {
   
 };
 function goToChapter(chapterName) {
-  const chapter = chapterName;
+  const chapter = chaptersObj[chapterName];
   console.log(chapter.subtitle);
   console.log(chapter.text);
 
