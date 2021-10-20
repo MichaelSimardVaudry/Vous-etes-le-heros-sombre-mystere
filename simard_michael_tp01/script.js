@@ -287,11 +287,13 @@ let chaptersObj = {
 
 function goToChapter(chapterName) {
   let chapter = chaptersObj[chapterName];
+
   const titre = document.querySelector(".titre_chapitre");
   const descriptionChap = document.querySelector(".text_jeux");
   const chapImg = document.querySelector(".chapitre_img");
   const choixArr = chapter.options;
   let choixBut = "";
+
   chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   descriptionChap.innerHTML = chapter.text;
   titre.innerHTML = chapter.subtitle;
