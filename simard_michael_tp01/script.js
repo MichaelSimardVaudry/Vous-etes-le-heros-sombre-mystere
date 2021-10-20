@@ -1,3 +1,16 @@
+let keyFounded = false;
+(pieceSecretKey = function () {
+  keyFounded++;
+  goToChapter(`chapter1`);
+}),
+  (pieceSecrete = function () {
+    if (keyFounded == true) {
+      goToChapter(`chapter0_2`);
+    } else {
+      goToChapter(`chapter0`);
+    }
+  });
+
 let chaptersObj = {
   chapter1: {
     subtitle: "Où suis-je?",
@@ -6,7 +19,7 @@ let chaptersObj = {
     options: [
       {
         text: "Suivant",
-        action: "goToChapter(`chapter0`)",
+        action: "pieceSecrete()",
       },
     ],
   },
@@ -213,7 +226,7 @@ let chaptersObj = {
     options: [
       {
         text: "Suivant",
-        action: "pieceSecret1()",
+        action: "goTochapter(`chapter4_1_2`)",
       },
     ],
   },
@@ -246,7 +259,7 @@ let chaptersObj = {
     options: [
       {
         text: "Suivant",
-        action: "goToChapter(`chapter1`)",
+        action: "pieceSecretKey()",
       },
     ],
   },
@@ -284,6 +297,8 @@ let chaptersObj = {
     ],
   },
 };
+
+console.log(chaptersObj.chapter0.subtitle);
 
 function goToChapter(chapterName) {
   let chapter = chaptersObj[chapterName];
