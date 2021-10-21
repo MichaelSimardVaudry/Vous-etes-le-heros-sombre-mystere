@@ -309,7 +309,7 @@ function goToChapter(chapterName) {
   const choixArr = chapter.options;
   let choixBut = "";
 
-  chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3" style="z-index: 1">`;
+  chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   descriptionChap.innerHTML = chapter.text;
   titre.innerHTML = chapter.subtitle;
 
