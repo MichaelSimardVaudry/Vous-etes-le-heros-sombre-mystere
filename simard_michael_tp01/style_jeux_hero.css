@@ -32,7 +32,9 @@ body {
   font-size: 30px;
 }
 .text_jeux {
+  font-size: 10px;
   font-family: "Josefin Sans", sans-serif;
+  text-align: center;
 }
 .butterfly {
   max-width: 50%;
