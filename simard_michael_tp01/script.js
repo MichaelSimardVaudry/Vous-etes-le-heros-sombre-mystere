@@ -3,7 +3,7 @@ let keyFounded = false;
 function pieceSecretKey() {
   keyFounded = true;
   goToChapter(`chapter1`);
-};
+}
 
 function pieceSecrete() {
   if (keyFounded == true) {
@@ -11,7 +11,7 @@ function pieceSecrete() {
   } else {
     goToChapter(`chapter0`);
   }
-};
+}
 
 let chaptersObj = {
   chapter1: {
@@ -312,22 +312,14 @@ function goToChapter(chapterName) {
   chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   descriptionChap.innerHTML = chapter.text;
   titre.innerHTML = chapter.subtitle;
-<<<<<<< HEAD
-  console.log();
-  for (let index = 0; index < choixArr.length; index++) {
-    const opt = choixArr[index];
-    console.log(opt);
-    choixBut += `<input class="bouton" type="submit" value="${opt.text}" onclick="${opt.action}">`;
-=======
 
   for (let index = 0; index < choixArr.length; index++) {
     const opt = choixArr[index];
     choixBut += `<button onclick="${opt.action}">${opt.text}</button>`;
->>>>>>> 7a334ed4a1c8fc427d51d7ca40eaeaf1b8603f12
     console.log(choixBut);
   }
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
 }
 
-goToChapter('chapter1');
+goToChapter("chapter1");
