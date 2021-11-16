@@ -46,15 +46,15 @@ let chaptersObj = {
     img: "assets/img/chapter_01_wall.jpg",
     options: [
       {
-        text: "vous briser le miroir",
+        text: "Vous briser le miroir",
         action: "goToChapter(`chapter1_1`)",
       },
       {
-        text: "vous grimpez sur le dessu du mur ",
+        text: "Vous grimpez sur le dessus du mur ",
         action: "goToChapter(`chapter1_2`)",
       },
       {
-        text: "mettre un morceau de fer pour bloquer les murs",
+        text: "Mettre un morceau de fer pour bloquer les murs",
         action: "goToChapter(`chapter1_3`)",
       },
     ],
@@ -76,7 +76,7 @@ let chaptersObj = {
     options: [
       {
         text: "Suivant",
-        action: "agoToChapter(`chapter2`)",
+        action: "goToChapter(`chapter2`)",
       },
     ],
   },
@@ -193,7 +193,7 @@ let chaptersObj = {
   },
   chapter4: {
     subtitle: "Repas joyeux",
-    text: "Sur une une table devant vous, ce trooube 3 puddings, vous devez faire le cchoix dent manger un.",
+    text: "Sur une une table devant vous, ce trouve 3 puddings, vous devez en manger un.",
     img: "assets/img/chapter_04_table.jpg",
     options: [
       {
@@ -212,7 +212,7 @@ let chaptersObj = {
   },
   chapter4_1: {
     subtitle: "Repas joyeux",
-    text: "Vous êtes drogé. vous commencer a sentire des effets étranges. votre âme sort de votre corps.",
+    text: "Vous êtes drogé. Vous commencer a sentir des effets étranges. votre âme sort de votre corps.",
     img: "assets/img/chapter_04_01.png",
     options: [
       {

@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Playfair+Display&display=swap");
 
 body {
+  box-sizing: border-box;
   background-color: #0a0908;
   display: flex;
   align-items: center;
@@ -45,17 +46,20 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-input:hover {
+button:hover {
   background-color: #51788b;
   color: #eebebe;
   display: flex;
   justify-content: space-evenly;
 }
-input {
+button {
+  letter-spacing: 0.1px;
+  word-spacing: 0px;
   background-color: #161e22;
   color: #eae0d5;
   border-radius: 20px;
   border-style: solid;
   border-width: 3px;
   border-color: #0a0908;
+  font-size: 1px;
 }
