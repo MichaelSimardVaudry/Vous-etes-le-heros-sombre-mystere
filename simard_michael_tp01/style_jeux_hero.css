@@ -45,13 +45,13 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-button:hover {
+input:hover {
   background-color: #51788b;
   color: #eebebe;
   display: flex;
   justify-content: space-evenly;
 }
-button {
+input {
   background-color: #161e22;
   color: #eae0d5;
   border-radius: 20px;

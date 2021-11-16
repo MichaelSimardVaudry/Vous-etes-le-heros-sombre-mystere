@@ -312,10 +312,11 @@ function goToChapter(chapterName) {
   chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   descriptionChap.innerHTML = chapter.text;
   titre.innerHTML = chapter.subtitle;
-
-  for (let index = 0; index < choixArr.lengt; index++) {
+  console.log();
+  for (let index = 0; index < choixArr.length; index++) {
     const opt = choixArr[index];
-    choixBut += `<input class="boutons" type="submit" value="${opt.text}" onclick="${opt.action}">`;
+    console.log(opt);
+    choixBut += `<input class="bouton" type="submit" value="${opt.text}" onclick="${opt.action}">`;
     console.log(choixBut);
   }
   let choixBar = document.querySelector(".boutons");
