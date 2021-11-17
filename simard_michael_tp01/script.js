@@ -13,6 +13,9 @@ function pieceSecrete() {
   }
 }
 
+localStorage.getItem("sauvgarde");
+const sauvgarde = document.querySelector(".bouton");
+
 let chaptersObj = {
   chapter1: {
     subtitle: "Où suis-je?",
@@ -113,7 +116,7 @@ let chaptersObj = {
   chapter2_1: {
     subtitle: "vous ou elle",
     text: "la piece et le tube se rempli de poison",
-    img: "assets/img/chapter_02_01_gas.png",
+    video: "assets/mp4/gas.mp4",
     options: [
       {
         text: "Suivant",
@@ -146,7 +149,7 @@ let chaptersObj = {
   chapter2_3: {
     subtitle: "vous ou elle",
     text: "La piece ce rempli de poison.",
-    img: "assets/img/chapter_02_01_gas.png",
+    video: "assets/mp4/gas.mp4",
     options: [
       {
         text: "Suivant",
@@ -172,7 +175,7 @@ let chaptersObj = {
   chapter3_1: {
     subtitle: "Vitesse",
     text: "vous tirez une balle dans votre tête.",
-    img: "assets/img/chapter_03_pistolet.jpg",
+    video: "assets/mp4/saw1.mp4",
     options: [
       {
         text: "Suivant",
@@ -183,7 +186,7 @@ let chaptersObj = {
   chapter3_2: {
     subtitle: "Vitesse",
     text: "L'arme ne tire pas.",
-    img: "assets/img/chapter_03_pistolet.jpg",
+    img: "assets/mp4/saw1.mp4",
     options: [
       {
         text: "Suivant",
@@ -310,16 +313,25 @@ function goToChapter(chapterName) {
   let choixBut = "";
 
   chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
+  if (chapter.video == null) {
+    chapImg.innerHTML = `<video src="${chapter.video}" autoplay>`;
+  }
+
   descriptionChap.innerHTML = chapter.text;
   titre.innerHTML = chapter.subtitle;
 
   for (let index = 0; index < choixArr.length; index++) {
     const opt = choixArr[index];
-    choixBut += `<button onclick="${opt.action}">${opt.text}</button>`;
+    choixBut += `<button class="bouton" onclick="${opt.action}">${opt.text}</button>`;
     console.log(choixBut);
   }
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
+
+  sauvgarde.addEventListener("click", function () {
+    console.log("sauvgarde");
+    localStorage.setItem("sauvgarde");
+  });
 }
 
 goToChapter("chapter1");
