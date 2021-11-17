@@ -312,9 +312,10 @@ function goToChapter(chapterName) {
   const choixArr = chapter.options;
   let choixBut = "";
 
-  chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
-  if (chapter.video == null) {
+  if (chapter.video == "") {
     chapImg.innerHTML = `<video src="${chapter.video}" autoplay>`;
+  } else {
+    chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   }
 
   descriptionChap.innerHTML = chapter.text;
@@ -323,7 +324,7 @@ function goToChapter(chapterName) {
   for (let index = 0; index < choixArr.length; index++) {
     const opt = choixArr[index];
     choixBut += `<button class="bouton" onclick="${opt.action}">${opt.text}</button>`;
-    console.log(choixBut);
+    console.log("chapitre suivant");
   }
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
