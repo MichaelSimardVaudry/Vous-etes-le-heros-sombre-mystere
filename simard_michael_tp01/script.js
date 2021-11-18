@@ -186,7 +186,7 @@ let chaptersObj = {
   chapter3_2: {
     subtitle: "Vitesse",
     text: "L'arme ne tire pas.",
-    img: "assets/mp4/saw1.mp4",
+    video: "assets/mp4/saw1.mp4",
     options: [
       {
         text: "Suivant",
@@ -304,6 +304,8 @@ let chaptersObj = {
 };
 
 function goToChapter(chapterName) {
+  const song = new Audio("assets/mp3/gouttes.mp3");
+  song.play();
   let chapter = chaptersObj[chapterName];
 
   const titre = document.querySelector(".titre_chapitre");
@@ -312,8 +314,8 @@ function goToChapter(chapterName) {
   const choixArr = chapter.options;
   let choixBut = "";
 
-  if (chapter.video == "") {
-    chapImg.innerHTML = `<video src="${chapter.video}" autoplay>`;
+  if ("video" in chapter) {
+    chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop>`;
   } else {
     chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   }
@@ -331,7 +333,7 @@ function goToChapter(chapterName) {
 
   sauvgarde.addEventListener("click", function () {
     console.log("sauvgarde");
-    localStorage.setItem("sauvgarde");
+    localStorage.setItem("sauvgarde", chapter);
   });
 }
 

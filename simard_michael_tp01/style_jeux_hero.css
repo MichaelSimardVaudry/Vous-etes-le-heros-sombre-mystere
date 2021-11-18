@@ -63,3 +63,6 @@ button {
   border-color: #0a0908;
   font-size: 1px;
 }
+video {
+  width: 400px;
+}
