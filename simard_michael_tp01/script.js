@@ -1,3 +1,4 @@
+localStorage.getItem("keys");
 let keyFounded = false;
 
 function pieceSecretKey() {
@@ -13,8 +14,12 @@ function pieceSecrete() {
   }
 }
 
-localStorage.getItem("sauvgarde");
-const sauvgarde = document.querySelector(".bouton");
+localStorage.getItem("sauvgardeChap");
+
+const song = new Audio("assets/mp3/gouttes.mp3");
+song.pause();
+
+///const sauvgarde = document.querySelector(".bouton");
 
 let chaptersObj = {
   chapter1: {
@@ -304,8 +309,8 @@ let chaptersObj = {
 };
 
 function goToChapter(chapterName) {
-  const song = new Audio("assets/mp3/gouttes.mp3");
   song.play();
+
   let chapter = chaptersObj[chapterName];
 
   const titre = document.querySelector(".titre_chapitre");
@@ -330,11 +335,12 @@ function goToChapter(chapterName) {
   }
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
-
-  sauvgarde.addEventListener("click", function () {
-    console.log("sauvgarde");
-    localStorage.setItem("sauvgarde", chapter);
-  });
 }
+
+/*sauvgarde.addEventListener("click", function () {
+  console.log("sauvgarde");
+  localStorage.setItem("sauvgardeChap", chapter);
+  localStorage.setItem("keys", keyFounded);
+});*/
 
 goToChapter("chapter1");
