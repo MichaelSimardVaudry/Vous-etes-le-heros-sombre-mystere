@@ -19,7 +19,7 @@ localStorage.getItem("sauvgardeChap");
 const song = new Audio("assets/mp3/gouttes.mp3");
 song.pause();
 
-///const sauvgarde = document.querySelector(".bouton");
+const sauvgarde = document.querySelector(".btn");
 
 let chaptersObj = {
   chapter1: {
@@ -330,17 +330,17 @@ function goToChapter(chapterName) {
 
   for (let index = 0; index < choixArr.length; index++) {
     const opt = choixArr[index];
-    choixBut += `<button class="bouton" onclick="${opt.action}">${opt.text}</button>`;
+    choixBut += `<button class="btn" onclick="${opt.action}">${opt.text}</button>`;
     console.log("chapitre suivant");
   }
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
 }
 
-/*sauvgarde.addEventListener("click", function () {
+sauvgarde.addEventListener("click", function () {
   console.log("sauvgarde");
   localStorage.setItem("sauvgardeChap", chapter);
   localStorage.setItem("keys", keyFounded);
-});*/
+});
 
 goToChapter("chapter1");
