@@ -1,8 +1,12 @@
-localStorage.getItem("keys");
-let keyFounded = false;
+
+let keyFounded = false; // keyFounded non trouvé par défaut (false)
+if (localStorage.getItem("keys") != null) { // Est-ce que keyfounded est sauvegardé dans localStorage?
+  keyFounded = localStorage.getItem("keys") // Si oui, donnons la valeur à keyfounded de ce qu'il  y a de sauvegardé.
+}
 
 function pieceSecretKey() {
   keyFounded = true;
+  localStorage.setItem("keys", keyFounded);
   goToChapter(`chapter1`);
 }
 
@@ -14,12 +18,9 @@ function pieceSecrete() {
   }
 }
 
-localStorage.getItem("sauvgardeChap");
-
 const song = new Audio("assets/mp3/gouttes.mp3");
 song.pause();
 
-const sauvgarde = document.querySelector(".btn");
 
 let chaptersObj = {
   chapter1: {
@@ -309,6 +310,7 @@ let chaptersObj = {
 };
 
 function goToChapter(chapterName) {
+  song.currentTime = 0;
   song.play();
 
   let chapter = chaptersObj[chapterName];
@@ -320,8 +322,10 @@ function goToChapter(chapterName) {
   let choixBut = "";
 
   if ("video" in chapter) {
+    console.log('video')
     chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop>`;
   } else {
+    console.log('image')
     chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
   }
 
@@ -335,12 +339,13 @@ function goToChapter(chapterName) {
   }
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
+
+  localStorage.setItem("sauvgardeChap", chapterName);
 }
 
-sauvgarde.addEventListener("click", function () {
-  console.log("sauvgarde");
-  localStorage.setItem("sauvgardeChap", chapter);
-  localStorage.setItem("keys", keyFounded);
-});
+let currentchapter = 'chapter1'; // Chapitre de départ par défaut
+if (localStorage.getItem("sauvgardeChap") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
+  currentchapter = localStorage.getItem("sauvgardeChap") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
+}
+goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
 
-goToChapter("chapter1");
