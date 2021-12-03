@@ -343,4 +343,12 @@ sauvgarde.addEventListener("click", function () {
   localStorage.setItem("keys", keyFounded);
 });
 
+const reset = document.querySelector(".reset");
+
+reset.addEventListener("click", () => {
+  localStorage.clear("key");
+  localStorage.clear("sauvgardeChap");
+  goToChapter("chapter1");
+  console.log("reset");
+});
 goToChapter("chapter1");

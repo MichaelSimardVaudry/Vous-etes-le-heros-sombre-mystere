@@ -6,7 +6,7 @@
 
 **Inspiration**: [SAW](https://www.imdb.com/title/tt0387564/)
 
-**Palette de couleurs**: [coolors.co](https://coolors.co/c03221-dc9590-f7f7ff-fbbbbf-ff7e7e-aa6e7a-1d2128-497071-3e826d)
+**Palette de couleurs**: [coolors.co](https://coolors.co/cc0033-eae0d5-f7f7ff-000000-1d2128)
 
 ## **Diagramme**
 

@@ -22,12 +22,13 @@ body {
   z-index: -1;
 }
 .game {
+  border-radius: 15px;
   padding: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: #c03221;
+  background-color: #d55a79ee;
   color: #eae0d5;
   width: 600px;
   max-width: 900px;
@@ -46,6 +47,7 @@ body {
   font-size: 10px;
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
+  padding-bottom: 20px;
 }
 img {
   max-height: 400px;
@@ -56,13 +58,15 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-button:hover {
-  background-color: #aa6e7a;
+button:hover,
+.reset:hover {
+  background-color: #e4244a87;
   color: #ffffff;
   display: flex;
   justify-content: space-evenly;
 }
-button {
+button,
+.reset {
   letter-spacing: 0.1px;
   word-spacing: 0px;
   background-color: #1d2128;
@@ -70,9 +74,24 @@ button {
   border-radius: 20px;
   border-style: solid;
   border-width: 3px;
-  border-color: #33494d;
+  border-color: #000000;
   font-size: 1px;
 }
+.reset {
+  right: 0;
+  position: absolute;
+}
+.btnRst {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  padding: 10px;
+}
+label {
+  color: #eae0d5;
+  background-color: #1d2128;
+}
+
 video {
-  width: 400px;
+  width: 100%;
 }
