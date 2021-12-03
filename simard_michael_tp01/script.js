@@ -320,9 +320,9 @@ function goToChapter(chapterName) {
   let choixBut = "";
 
   if ("video" in chapter) {
-    chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop>`;
+    chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop width="100%" height="auto">`;
   } else {
-    chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
+    chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3" width="1920px" height="1080px">`;
   }
 
   descriptionChap.innerHTML = chapter.text;

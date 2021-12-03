@@ -5,19 +5,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Playfair+Display&display=swap");
 
 body {
-  box-sizing: border-box;
-  background-color: #0a0908;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .game {
+  padding: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: #927e67;
+  background-color: #c03221;
   color: #eae0d5;
   width: 600px;
   max-width: 900px;
@@ -47,20 +57,20 @@ img {
   justify-content: space-evenly;
 }
 button:hover {
-  background-color: #51788b;
-  color: #eebebe;
+  background-color: #aa6e7a;
+  color: #ffffff;
   display: flex;
   justify-content: space-evenly;
 }
 button {
   letter-spacing: 0.1px;
   word-spacing: 0px;
-  background-color: #161e22;
+  background-color: #1d2128;
   color: #eae0d5;
   border-radius: 20px;
   border-style: solid;
   border-width: 3px;
-  border-color: #0a0908;
+  border-color: #33494d;
   font-size: 1px;
 }
 video {
