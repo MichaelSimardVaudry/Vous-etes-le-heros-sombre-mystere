@@ -26,6 +26,7 @@ let chaptersObj = {
     subtitle: "Où suis-je?",
     text: "Vous vous reveillez dans une grande entrepôt",
     img: "assets/img/reveil.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -37,6 +38,7 @@ let chaptersObj = {
     subtitle: "pris au piège",
     text: "Touts d'un coups vous sentez de forte vibration de nul part, d'un seul coups vous vous apercevez que les mure de chaque coter de la piece bouge ne ce refermant sur vous",
     img: "assets/img/chapter_01_wall.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "vous grimpez sur le dessu du mur ",
@@ -52,6 +54,7 @@ let chaptersObj = {
     subtitle: "pris au piège",
     text: "Touts d'un coups vous sentez de forte vibration de nul part, d'un seul coups vous vous apercevez que les mure de chaque coter de la piece bouge ne ce refermant sur vous",
     img: "assets/img/chapter_01_wall.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Vous briser le miroir",
@@ -71,6 +74,7 @@ let chaptersObj = {
     subtitle: "pris au piège",
     text: "vous arrivez dans une salle  avec une petite statue qui vous regade et vous dits félicitaion !",
     img: "assets/img/chapter_01_01_statue.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Bravo!",
@@ -81,6 +85,7 @@ let chaptersObj = {
     subtitle: "pris au piège",
     text: "Vous franchiser une petite porte.",
     img: "assets/img/chapter_01_02_porte.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -92,6 +97,7 @@ let chaptersObj = {
     subtitle: "pris au piège",
     text: "vous mourez transpercé par le bout de fer",
     img: "assets/img/chapter_01_01_statue.jpg",
+    background: "knife_dead.mov",
     options: [
       {
         text: "Suivant",
@@ -103,6 +109,7 @@ let chaptersObj = {
     subtitle: "vous ou elle",
     text: "En entrant dans la piece vous appercevez un gros tube avec une inconnue a l'interieur. Sur un panneau devant vous, ce trouve 3 boutons, un rouge, un bleu et un vert.",
     img: "assets/img/chapter_02_tube.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "appuyer sur le bouton noir",
@@ -122,6 +129,7 @@ let chaptersObj = {
     subtitle: "vous ou elle",
     text: "la piece et le tube se rempli de poison",
     video: "assets/mp4/gas.mp4",
+    background: "knife_smoke.mov",
     options: [
       {
         text: "Suivant",
@@ -133,6 +141,7 @@ let chaptersObj = {
     subtitle: "vous ou elle",
     text: "Le tube devant vous ce remplit de gas",
     img: "assets/img/chapter_02_01_gas.png",
+    background: "knife_smoke.mov",
     options: [
       {
         text: "Suivant",
@@ -144,6 +153,7 @@ let chaptersObj = {
     subtitle: "vous ou elle",
     text: "la porte devant vous s'ouvre, vous la franchisez.",
     img: "assets/img/chapter_01_02_porte.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -155,6 +165,7 @@ let chaptersObj = {
     subtitle: "vous ou elle",
     text: "La piece ce rempli de poison.",
     video: "assets/mp4/gas.mp4",
+    background: "knife_smoke.mov",
     options: [
       {
         text: "Suivant",
@@ -166,6 +177,7 @@ let chaptersObj = {
     subtitle: "Vitesse",
     text: "Devant vous sur la table ce trouve une arme. celle ci est chargé d'une balle. vous comprenez que vous devrez jouer a la roulette russe.",
     img: "assets/img/chapter_03_pistolet.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "vous tournez rapidement",
@@ -181,6 +193,7 @@ let chaptersObj = {
     subtitle: "Vitesse",
     text: "vous tirez une balle dans votre tête.",
     video: "assets/mp4/saw1.mp4",
+    background: "knife_dead.mov",
     options: [
       {
         text: "Suivant",
@@ -192,6 +205,7 @@ let chaptersObj = {
     subtitle: "Vitesse",
     text: "L'arme ne tire pas.",
     video: "assets/mp4/saw1.mp4",
+    background: "knife_dead.mov",
     options: [
       {
         text: "Suivant",
@@ -203,6 +217,7 @@ let chaptersObj = {
     subtitle: "Repas joyeux",
     text: "Sur une une table devant vous, ce trouve 3 puddings, vous devez en manger un.",
     img: "assets/img/chapter_04_table.jpg",
+    background: "moving_knife.mov",
     options: [
       {
         text: "puding droit",
@@ -222,6 +237,7 @@ let chaptersObj = {
     subtitle: "Repas joyeux",
     text: "Vous êtes drogé. Vous commencer a sentir des effets étranges. votre âme sort de votre corps.",
     img: "assets/img/chapter_04_01.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -233,6 +249,7 @@ let chaptersObj = {
     subtitle: "Repas joyeux",
     text: "Vous traversez les murs.",
     img: "assets/img/chapter_04_01.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -242,8 +259,9 @@ let chaptersObj = {
   },
   chapter4_1_2: {
     subtitle: "Repas joyeux",
-    text: "vous vous trouvez dans une piece munis dun mimoir a travers lequelle vous pouvez voir.",
+    text: "vous vous trouvez dans une piece munis d'un miroir a travers lequelle vous pouvez voir.",
     img: "assets/img/chapter_04_01.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -253,8 +271,9 @@ let chaptersObj = {
   },
   chapter4_1_3: {
     subtitle: "Repas joyeux",
-    text: "Vous apercevez la piece originel ou vous vous ètes reveillez.",
+    text: "Vous apercevez la piece originel ou vous vous ètes révéillé.",
     img: "assets/img/chapter_04_01.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -266,6 +285,7 @@ let chaptersObj = {
     subtitle: "Repas joyeux",
     text: "vous mourez d'une overdose de stupéfiant.",
     img: "assets/img/chapter_04_01.png",
+    background: "knife_dead.mov",
     options: [
       {
         text: "Suivant",
@@ -277,6 +297,7 @@ let chaptersObj = {
     subtitle: "Repas joyeux",
     text: "Vous êtes drogé. vous commencer a sentire des effets étranges. votre âme sort de votre corps.",
     img: "assets/img/chapter_04_01.png",
+    background: "moving_knife.mov",
     options: [
       {
         text: "Suivant",
@@ -288,6 +309,7 @@ let chaptersObj = {
     subtitle: "Repas joyeux",
     text: "vous mourez empoisoné",
     img: "assets/img/chapter_04_01.png",
+    background: "knife_dead.mov",
     options: [
       {
         text: "Suivant",
@@ -297,8 +319,9 @@ let chaptersObj = {
   },
   chapter4_2_1: {
     subtitle: "Repas joyeux",
-    text: "Vous recevez une balle dans la tête",
+    text: "vous mourez empoisoné",
     img: "assets/img/chapter_04_01.png",
+    background: "knife_dead.mov",
     options: [
       {
         text: "Suivant",
@@ -319,7 +342,7 @@ function goToChapter(chapterName) {
   const chapImg = document.querySelector(".chapitre_img");
   const choixArr = chapter.options;
   let choixBut = "";
-
+  const backgroundImg = document.querySelector(".changeBG");
   if ("video" in chapter) {
     chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop width="100%" height="auto">`;
   } else {
@@ -337,6 +360,18 @@ function goToChapter(chapterName) {
   let choixBar = document.querySelector(".boutons");
   choixBar.innerHTML = choixBut;
 
+  if ("background" in chapter) {
+    backgroundImg.innerHTML += `<video src="assets/mp4/${chapter.background}" loop
+    muted
+    autoplay
+    id="background-video">`;
+  } else {
+    backgroundImg.innerHTML += `<video src="assets/mp4/moving_knife.mov" loop
+  muted
+  autoplay
+  id="background-video"></video>`;
+  }
+
   localStorage.setItem("sauvgardeChap", chapterName);
 }
 
@@ -346,6 +381,16 @@ if (localStorage.getItem("sauvgardeChap") != null) {
   currentchapter = localStorage.getItem("sauvgardeChap"); // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
 goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
+
+let muted = document.querySelector(".son");
+
+/*muted.addEventListener("click", () => {
+  if (song.p) {
+    song = new Audio("assets/mp3/gouttes.mp3");
+  } else {
+    song = new Audio("");
+  }
+});*/
 
 const reset = document.querySelector(".reset");
 
