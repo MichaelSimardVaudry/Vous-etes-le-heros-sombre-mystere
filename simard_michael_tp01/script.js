@@ -1,7 +1,7 @@
-
 let keyFounded = false; // keyFounded non trouvé par défaut (false)
-if (localStorage.getItem("keys") != null) { // Est-ce que keyfounded est sauvegardé dans localStorage?
-  keyFounded = localStorage.getItem("keys") // Si oui, donnons la valeur à keyfounded de ce qu'il  y a de sauvegardé.
+if (localStorage.getItem("keys") != null) {
+  // Est-ce que keyfounded est sauvegardé dans localStorage?
+  keyFounded = localStorage.getItem("keys"); // Si oui, donnons la valeur à keyfounded de ce qu'il  y a de sauvegardé.
 }
 
 function pieceSecretKey() {
@@ -20,7 +20,6 @@ function pieceSecrete() {
 
 const song = new Audio("assets/mp3/gouttes.mp3");
 song.pause();
-
 
 let chaptersObj = {
   chapter1: {
@@ -322,11 +321,9 @@ function goToChapter(chapterName) {
   let choixBut = "";
 
   if ("video" in chapter) {
-    console.log('video')
-    chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop>`;
+    chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop width="100%" height="auto">`;
   } else {
-    console.log('image')
-    chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3">`;
+    chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3" width="1920px" height="1080px">`;
   }
 
   descriptionChap.innerHTML = chapter.text;
@@ -343,9 +340,19 @@ function goToChapter(chapterName) {
   localStorage.setItem("sauvgardeChap", chapterName);
 }
 
-let currentchapter = 'chapter1'; // Chapitre de départ par défaut
-if (localStorage.getItem("sauvgardeChap") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
-  currentchapter = localStorage.getItem("sauvgardeChap") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
+let currentchapter = "chapter1"; // Chapitre de départ par défaut
+if (localStorage.getItem("sauvgardeChap") != null) {
+  // Est-ce qu'un chapitre est sauvegardé dans localStorage?
+  currentchapter = localStorage.getItem("sauvgardeChap"); // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
 goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
 
+const reset = document.querySelector(".reset");
+
+reset.addEventListener("click", () => {
+  localStorage.clear("key");
+  localStorage.clear("sauvgardeChap");
+  goToChapter("chapter1");
+  console.log("reset");
+});
+goToChapter("chapter1");
