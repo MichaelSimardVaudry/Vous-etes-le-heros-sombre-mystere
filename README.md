@@ -1,6 +1,6 @@
 ![logo](assets/img/sombremystere.png)
 
-[** :star::star::star: EN LIGNE :star::star::star: **](https://michaelsimardvaudry.github.io/Vous-etes-le-heros-sombre-mystere/)
+[ :star::star::star: EN LIGNE :star::star::star: ](https://michaelsimardvaudry.github.io/Vous-etes-le-heros-sombre-mystere/)
 
 [Développement web - Projet vous êtes le héros](https://smnarnold.com/projets/vous-etes-le-heros)
 
