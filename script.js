@@ -259,7 +259,7 @@ let chaptersObj = {
     options: [
       {
         text: "Suivant",
-        action: "goTochapter(`chapter4_1_2`)",
+        action: "goToChapter(`chapter4_1_2`)",
       },
     ],
   },
