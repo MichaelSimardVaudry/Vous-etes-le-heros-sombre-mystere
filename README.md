@@ -1,4 +1,4 @@
-![logo](simard_michael_tp01/assets/img/sombremystere.png)
+![logo](assets/img/sombremystere.png)
 
 [Développement web - Projet vous êtes le héros](https://smnarnold.com/projets/vous-etes-le-heros)
 
@@ -10,4 +10,4 @@
 
 ## **Diagramme**
 
-![draw.io](simard_michael_tp01/assets/img/sombre_mystere_drawio.png)
+![draw.io](assets/img/sombre_mystere_drawio.png)
