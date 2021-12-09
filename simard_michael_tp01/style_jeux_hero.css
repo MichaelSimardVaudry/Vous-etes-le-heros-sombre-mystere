@@ -22,6 +22,18 @@ body {
   bottom: 0;
   z-index: -1;
 }
+.smoke_bgc {
+  background-color: #22a543ee;
+  color: #b2f8a9;
+}
+.blood_bgc {
+  background-color: #a30000ee;
+  color: #ff5f5f;
+}
+.glitch_bgc {
+  background-color: #00a1e0ee;
+  color: #a3daff;
+}
 .game {
   border-radius: 15px;
   padding: 15px;
@@ -37,6 +49,7 @@ body {
   min-height: 100px;
   height: 700px;
 }
+
 .titre_jeux {
   height: 150px;
 }

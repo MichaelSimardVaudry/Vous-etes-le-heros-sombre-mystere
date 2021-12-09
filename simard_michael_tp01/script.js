@@ -130,6 +130,7 @@ let chaptersObj = {
     text: "la piece et le tube se rempli de poison",
     video: "assets/mp4/gas.mp4",
     background: "knife_smoke.mov",
+    modification: "'smoke_bgc'",
     options: [
       {
         text: "Suivant",
@@ -142,6 +143,7 @@ let chaptersObj = {
     text: "Le tube devant vous ce remplit de gas",
     img: "assets/img/chapter_02_01_gas.png",
     background: "knife_smoke.mov",
+    modification: "smoke_bgc",
     options: [
       {
         text: "Suivant",
@@ -166,6 +168,7 @@ let chaptersObj = {
     text: "La piece ce rempli de poison.",
     video: "assets/mp4/gas.mp4",
     background: "knife_smoke.mov",
+    modification: "smoke_bgc",
     options: [
       {
         text: "Suivant",
@@ -194,6 +197,7 @@ let chaptersObj = {
     text: "vous tirez une balle dans votre tête.",
     video: "assets/mp4/saw1.mp4",
     background: "knife_dead.mov",
+    modification: "blood_bgc",
     options: [
       {
         text: "Suivant",
@@ -205,7 +209,9 @@ let chaptersObj = {
     subtitle: "Vitesse",
     text: "L'arme ne tire pas.",
     video: "assets/mp4/saw1.mp4",
-    background: "knife_dead.mov",
+    background: "knife_glitch.mov",
+    modification: "blood_bgc",
+
     options: [
       {
         text: "Suivant",
@@ -332,21 +338,33 @@ let chaptersObj = {
 };
 
 function goToChapter(chapterName) {
-  song.currentTime = 0;
-  song.play();
+  let muted = document.querySelector(".son");
+
+  if (muted.checked) {
+    console.log("sound is muted");
+    song.pause();
+  } else {
+    console.log("sound is playing");
+    song.currentTime = 0;
+    song.play();
+  }
 
   let chapter = chaptersObj[chapterName];
-
+  const gamebg = document.querySelector(".game");
   const titre = document.querySelector(".titre_chapitre");
   const descriptionChap = document.querySelector(".text_jeux");
   const chapImg = document.querySelector(".chapitre_img");
   const choixArr = chapter.options;
   let choixBut = "";
-  const backgroundImg = document.querySelector(".changeBG");
+  const backgroundImg = document.querySelector(".backgroundVideo");
   if ("video" in chapter) {
     chapImg.innerHTML = `<video src="${chapter.video}" autoplay loop width="100%" height="auto">`;
   } else {
     chapImg.innerHTML = `<img src="${chapter.img}" alt="image mort :3" width="1920px" height="1080px">`;
+  }
+
+  if ("modification" in chapter) {
+    gamebg.classList.add(chapter.modification);
   }
 
   descriptionChap.innerHTML = chapter.text;
@@ -361,12 +379,12 @@ function goToChapter(chapterName) {
   choixBar.innerHTML = choixBut;
 
   if ("background" in chapter) {
-    backgroundImg.innerHTML += `<video src="assets/mp4/${chapter.background}" loop
+    backgroundImg.innerHTML = `<video src="assets/mp4/${chapter.background}" loop
     muted
     autoplay
     id="background-video">`;
   } else {
-    backgroundImg.innerHTML += `<video src="assets/mp4/moving_knife.mov" loop
+    backgroundImg.innerHTML = `<video src="assets/mp4/moving_knife.mov" loop
   muted
   autoplay
   id="background-video"></video>`;
@@ -381,16 +399,6 @@ if (localStorage.getItem("sauvgardeChap") != null) {
   currentchapter = localStorage.getItem("sauvgardeChap"); // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
 goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
-
-let muted = document.querySelector(".son");
-
-/*muted.addEventListener("click", () => {
-  if (song.p) {
-    song = new Audio("assets/mp3/gouttes.mp3");
-  } else {
-    song = new Audio("");
-  }
-});*/
 
 const reset = document.querySelector(".reset");
 
